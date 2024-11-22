@@ -2,37 +2,37 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style for the Tic Tac Toe board container */
+.Tic-tack-toe-board {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 50px); /* 3 columns, each 50px wide */
+  grid-template-rows: repeat(3, 50px); /* 3 rows, each 50px high */
+  gap: 2px; /* Space between the squares */
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto; /* Center the board horizontally */
+  width: 170px; /* Total width (3 columns + gap) */
+  height: 170px; /* Total height (3 rows + gap) */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style for each square on the Tic Tac Toe board */
+.square {
+  width: 50px; /* Make the square fill the grid cell */
+  height: 50px; /* Make the square fill the grid cell */
+  font-size: 24px;
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Hover effect */
+.square:hover {
+  background-color: #e0e0e0; /* Lighter background on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Active effect when the square is clicked */
+.square:active {
+  background-color: #d0d0d0; /* Darker background on click */
 }
